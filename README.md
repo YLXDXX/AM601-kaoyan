@@ -1,37 +1,45 @@
 # 中科院601高等数学甲考研真题集
 
-#### 介绍
-中国科学院大学，601高等数学甲，历年考研真题收集整理
+这是一个关于中国科学院大学，601高等数学甲，历年考研真题收集整理的仓库，包含如下内容
 
-#### 软件架构
-软件架构说明
+```
+\include{1/2022}
+\include{1/2021}
+\include{1/2020}%官方
+\include{1/2019}%官方%校对完成
+\include{1/2018}%校对完成
+\include{1/2017}%官方%校对完成
+\include{1/2016}%官方%校对完成
+\include{1/2015}%官方%校对完成
+\include{1/2014}%官方%校对完成
+\include{1/2013}%官方%校对完成
+\include{1/2012}%校对完成
+\include{1/2011}%校对完成
+\include{1/2010}%校对完成
+\include{1/2009}%校对完成
+\include{1/2008}
+\include{1/2007}
+\include{1/2006}
+\include{1/2005}
+\include{1/2004}
+\include{1/2003}
+\include{1/2002}%缺答案
+\include{1/2001}%缺答案
+```
 
 
-#### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 一点说明
 
-#### 使用说明
+一年的时光已然匆匆，于此感谢各位小伙伴的帮助和分享。高等数学甲的真题我只从2009刷到了2019，对真题的校对也只是从2009到2019，顺道，我也给出了2009到2019的简明参考答案。其余年份的真题，可能会有一些错误，包括但不限于：错别字，用词错误，句子表达问题，公式的错误，字形的问题，标点符号的错误，版面的问题，排版的问题，答案的错误等等。这些遗留的问题，有待各位共同发现修改。
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+当各位在刷各年的真题时，若能顺手，发现错误，给出简明答案，提交到码云，或者直接拿此源文件修改后分享出来，鄙人不胜感激。愿:
 
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+> 古今共载树，天下齐乘凉
 
 
-#### 特技
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+Happy LaTeX
+
+
+
