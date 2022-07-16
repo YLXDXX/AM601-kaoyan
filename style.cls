@@ -38,22 +38,17 @@ openright,zihao=5]{ctexbook}
 \newif\ifanswer %答案显示
 
 
+
 \usepackage{ascolorbox}%答案框
 \usepackage{esint} % various fancy integral symbols %积分符号
 
 \renewcommand{\labelenumi}{\chinese{enumi}、}
 \renewcommand{\labelenumii}{(\arabic{enumii})}
 
-
 \usepackage{witharrows}%公式推导注释
-
-
-
-
 \usepackage{tabularray}%新型表格宏包，排版矩阵表格利器
 
-
-
+\usepackage[upright=true]{derivative}%分数导数微分偏微分增量改变量等 
 
 \usepackage{pifont}
 
