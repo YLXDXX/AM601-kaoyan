@@ -37,6 +37,7 @@ openright,zihao=5]{ctexbook}
 
 
 \newif\ifanswer %答案显示
+\newif\ifnynoteshow %NIYANhhhhh的个人笔记显示
 
 
 
@@ -86,11 +87,14 @@ openright,zihao=5]{ctexbook}
     \definecolor{ny_note_text}{RGB}{118, 57, 18}
     \newcommand\nynote[1]{
         \ifanswer
+        \ifnynoteshow
         \par\vspace{1mm}
         \noindent
         \textbf{\color{ny_note}NIYANhhhhh的笔记}\\
         {\kaishu \color{ny_note_text}{#1}}
         \par
+        \else
+        \fi
         \else
         \fi
     }
