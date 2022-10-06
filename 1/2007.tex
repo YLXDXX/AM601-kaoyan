@@ -24,19 +24,18 @@ $\lim\limits _{x \rightarrow 0} \frac{\tan x-\sin x}{\ln \left(1+x^{3}\right)}$ 
 
 
 \item
-$\int \frac{d x}{1+\sqrt[3]{x+2}}=$ \tk{$\frac{3}{2}(x+2)^{\frac{2}{3}}-3(x+2)^{\frac{1}{3}}+3 \ln (1+\sqrt[3]{x+2})+C$} 。
+    $\int \frac{d x}{1+\sqrt[3]{x+2}}=$ \tk{$\frac{3}{2}(x+2)^{\frac{2}{3}}-3(x+2)^{\frac{1}{3}}+3 \ln \abs{1+\sqrt[3]{x+2}}+C$} 。
 
 
 \item
 微分方程 $x^{2} y^{\prime}+x y=y^{2}$ 满足 $y(1)=2$ 的通解为 \tk{$ 2x $} 。
 
+\nynote{伯努利方程，见高数上P319。}
+
 
 \item
-设 $\Sigma$ 是曲面 $x^{2}+y^{2}+z^{2}=a^{2}$ 的外侧, $\cos \alpha, \cos \beta, \cos \gamma$ 是其外法向量的方向余 弦，则 $\iint_{\Sigma} \frac{x \cos \alpha+y \cos \beta+z \cos \gamma}{\left(x^{2}+y^{2}+z^{2}\right)^{\frac{1}{2}}} d S=$ \tk{$ 4\pi $} 。
-	
-	
-	
-	
+    设 $\Sigma$ 是曲面 $x^{2}+y^{2}+z^{2}=a^{2}$ 的外侧, $\cos \alpha, \cos \beta, \cos \gamma$ 是其外法向量的方向余 弦，则 $\iint_{\Sigma} \frac{x \cos \alpha+y \cos \beta+z \cos \gamma}{\left(x^{2}+y^{2}+z^{2}\right)^{\frac{3}{2}}} d S=$ \tk{$ 4\pi $} 。
+
 \end{enumerate}
 
 \item 
@@ -48,7 +47,7 @@ $\int \frac{d x}{1+\sqrt[3]{x+2}}=$ \tk{$\frac{3}{2}(x+2)^{\frac{2}{3}}-3(x+2)^{
 	%[topsep=-0.3em,parsep=-0.3em,itemsep=-0.3em,partopsep=-0.3em]
 	%可使用leftmargin调整列表环境左边的空白长度 [leftmargin=0em]
 	\item
-设 $f(x)=\left\{\begin{array}{ll}\frac{\sin (x-1)}{e^{x-1}}\left(\frac{1}{x}-b\right) & x \neq 1 \\ 2 & x=1\end{array}\right.$， 若 $f(x)$ 在 $x=1$ 处连续, 则 \xzanswer{B} 
+设 $f(x)=\left\{\begin{array}{ll}\frac{\sin (x-1)}{e^{x-1} - a}\left(\frac{1}{x}-b\right) & x \neq 1 \\ 2 & x=1\end{array}\right.$， 若 $f(x)$ 在 $x=1$ 处连续, 则 \xzanswer{B} 
 
 	
 \fourchoices
@@ -66,8 +65,8 @@ $\int \frac{d x}{1+\sqrt[3]{x+2}}=$ \tk{$\frac{3}{2}(x+2)^{\frac{2}{3}}-3(x+2)^{
 \fourchoices
 {$x_{0}$ 不是 $f(x) \cdot g(x)$ 的驻点}
 {$x_{0}$ 是 $f(x) \cdot g(x)$ 的驻点, 但不是 $f(x) \cdot g(x)$ 的极值点}
-{$x_{0}$ 不是 $f(x) \cdot g(x)$ 的驻点, 且是它的极小值点}
-{$x_{0}$ 不是 $f(x) \cdot g(x)$ 的驻点, 且是它的极大值点}
+{$x_{0}$ 是 $f(x) \cdot g(x)$ 的驻点, 且是它的极小值点}
+{$x_{0}$ 是 $f(x) \cdot g(x)$ 的驻点, 且是它的极大值点}
 
 	
 \item 
@@ -92,6 +91,9 @@ $\int \frac{d x}{1+\sqrt[3]{x+2}}=$ \tk{$\frac{3}{2}(x+2)^{\frac{2}{3}}-3(x+2)^{
 {$\left(-\frac{10}{3}, \frac{5}{3},-\frac{1}{3}\right)$}
 {$\left(\frac{10}{3},-\frac{5}{3}, \frac{1}{3}\right)$}
 
+\nynote{
+    取$P(1,1,1)$，则$\mathbf{OP}\times \mathbf{OP_1} = -\mathbf{OP}\times \mathbf{OP_2}$，且$PP_1=PP_2$，去掉$P_1$关于$P$的对称点，列方程可解。
+}
 
 
 \item
@@ -119,11 +121,16 @@ $\int \frac{d x}{1+\sqrt[3]{x+2}}=$ \tk{$\frac{3}{2}(x+2)^{\frac{2}{3}}-3(x+2)^{
  \]
  求 $\varphi(x) ^{\prime} $。
 
+\nynote{$\varphi(0)$处的导数要用定义另外求。}
 \banswer{
-	$\varphi^{\prime}(x)=\frac{x e^{x} f(x)+x e^{x} f^{\prime}(x)-e^{x} f(x)}{x^{2}}$
+    \begin{equation*}
+        \varphi^{\prime}(x)=
+        \begin{cases}
+            f^\prime (0) + f^{\prime\prime} (0),\qquad &x = 0\\
+            \frac{x e^{x} f(x)+x e^{x} f^{\prime}(x)-e^{x} f(x)}{x^{2}},\qquad &x\neq 0\\
+        \end{cases}
+    \end{equation*}
 }
-
-
 
 
 \item 
@@ -131,6 +138,10 @@ $\int \frac{d x}{1+\sqrt[3]{x+2}}=$ \tk{$\frac{3}{2}(x+2)^{\frac{2}{3}}-3(x+2)^{
 求满足 $x=\int_{0}^{x} f(t) d t+\int_{0}^{x} t f(t-x) d t$ 的可微函数 $f(x)$。
 
 
+\nynote{
+    化简等式可以得到$f'(x) + f(-x) = 0$，两边求导，化简得$f''(x) + f(x) = 0$，
+    解方程，套每步求导之前的等式可定$C_1$、$C_2$。
+}
 \banswer{
 	$f(x)= \cos x - \sin x$
 }
@@ -139,6 +150,10 @@ $\int \frac{d x}{1+\sqrt[3]{x+2}}=$ \tk{$\frac{3}{2}(x+2)^{\frac{2}{3}}-3(x+2)^{
 \item 
 (本题满分 10 分)
 若 $u=f(z y x), f(0)=0, f^{\prime}(1)=1$, 且 $\frac{\partial^{3} u}{\partial x \partial y \partial z}=x^{2} y^{2} z^{2} f^{\prime \prime \prime}(x y z)$, 求函数 $u$。
+
+\nynote{
+    展开偏导数，令$t=xyz$可得$f'(t) + 3tf''(t) = 0$，解方程。
+}
 \banswer{
 	$f(x y z)=\frac{3}{2}(x y z)^{\frac{2}{3}}$
 }
@@ -149,6 +164,8 @@ $\int \frac{d x}{1+\sqrt[3]{x+2}}=$ \tk{$\frac{3}{2}(x+2)^{\frac{2}{3}}-3(x+2)^{
 (本题满分 10 分)
 设 $L$ 是分段光滑的简单闭曲线,且点 $(2,0),(-2,0)$ 均在闭曲线 $L$ 所围成区域的内部, 计算曲线积分 $I=\oint_{L}\left[\frac{y}{(2-x)^{2}+y^{2}}+\frac{y}{(2+x)^{2}+y^{2}}\right] d x+\left[\frac{2-x}{(2-x)^{2}+y^{2}}+\frac{2+x}{(2+x)^{2}+y^{2}}\right] d y$, 其中 $L$ 取正向。
 
+\nynote{见高等数学典型题\textbf{10-45}，积分里面是全微分，挖洞，斯托克斯公式。}
+
 \banswer{
 	$I=-4 \pi$
 }
@@ -157,10 +174,15 @@ $\int \frac{d x}{1+\sqrt[3]{x+2}}=$ \tk{$\frac{3}{2}(x+2)^{\frac{2}{3}}-3(x+2)^{
 
 \item 
 (本题满分 10 分)
-求方程 $4 x^{2} y^{\prime \prime \prime}-4 x^{3} y^{\prime \prime}+4 x^{2} y^{\prime}=1$ 的形如 $y=a x^{-1}$ 的特解，进而求该方程的通解。
+求方程 $4 x^{4} y^{\prime \prime \prime}-4 x^{3} y^{\prime \prime}+4 x^{2} y^{\prime}=1$ 的形如 $y=a x^{-1}$ 的特解，进而求该方程的通解。
 
+\nynote{
+    欧拉方程，
+    令$x = e^t$可化为常系数方程，
+    先解齐次，再带上特解就可以了。
+}
 \banswer{
-	$y=C_{1}+\left(C_{2}+C_{3} \ln x\right) x^{2}-\frac{1}{36}$
+    $y=C_{1}+\left(C_{2}+C_{3} \ln x\right) x^{2}-\frac{1}{36}x^{-1}$
 }
 
 
@@ -169,10 +191,11 @@ $\int \frac{d x}{1+\sqrt[3]{x+2}}=$ \tk{$\frac{3}{2}(x+2)^{\frac{2}{3}}-3(x+2)^{
 (本题满分 10 分)
 在曲线 $\frac{x^{2}}{4}+y^{2}=1$ 上找到一个位于第一象限的点, 使得该曲线在该点处的切线与 该曲线以及 $x$ 轴和 $y$ 轴所围成的图形面积最小, 并求此最小面积。
 
-
+\nynote{可设切线为$ \frac{x}{a} + \frac{y}{b} = 1$，$a$、$b$为截距，借$\Delta=0$利用基本不等式求解。}
 
 \banswer{
-	$2-\frac{\pi}{2}$
+    $(\sqrt 2, \frac{\sqrt 2}{2})$,\quad
+    $S_{min} = 2-\frac{\pi}{2}$
 }
 
 
@@ -183,6 +206,8 @@ $\int \frac{d x}{1+\sqrt[3]{x+2}}=$ \tk{$\frac{3}{2}(x+2)^{\frac{2}{3}}-3(x+2)^{
 \[
 \frac{\pi\left(R^{2}-r^{2}\right)}{R+K} \leqslant \iint_{D} \frac{d \sigma}{\sqrt{(x-a)^{2}+(y-b)^{2}}} \leqslant \frac{\pi\left(R^{2}-r^{2}\right)}{r-K}
 \]
+
+\nynote{三角形三边关系不等式}
 
 \banswer{
 	证明略
