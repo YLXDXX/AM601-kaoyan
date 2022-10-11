@@ -20,6 +20,7 @@ openright,zihao=5]{ctexbook}
 \RequirePackage{enumerate} %列项序号编号
 \RequirePackage{amssymb} %数学公式符号
 \RequirePackage{amsmath} %数学公式
+\RequirePackage{physics} %一些符号的简写
 \RequirePackage{mathtools} %数学公式扩展宏包,提供了公式编号定制和更多的符号、矩阵等。
 \RequirePackage{amsfonts} %用来输入各种符号的特殊形态，例如字母的花体、空心体等，配合amssymb使用
 \RequirePackage{mathrsfs} %数学中的花体(不是太花的)
@@ -36,6 +37,7 @@ openright,zihao=5]{ctexbook}
 
 
 \newif\ifanswer %答案显示
+\newif\ifnynoteshow %NIYANhhhhh的个人笔记显示
 
 
 
@@ -79,10 +81,26 @@ openright,zihao=5]{ctexbook}
     \scriptsize\color{red!90}\textdbend~}
     \textbf{\color{mynote}笔记}~\kaishu}{\par}
 
-    
-    
-    
 
+%NIYANhhhhh's note
+    \definecolor{ny_note}{RGB}{6, 150, 52}
+    \definecolor{ny_note_text}{RGB}{118, 57, 18}
+    \newcommand\nynote[1]{
+        \ifanswer
+        \ifnynoteshow
+        \par\vspace{1mm}
+        \noindent
+        \textbf{\color{ny_note}NIYANhhhhh的笔记}\\
+        {\kaishu \color{ny_note_text}{#1}}
+        \par
+        \else
+        \fi
+        \else
+        \fi
+    }
+
+
+    
 %页脚
 \usepackage{fancyhdr}
 

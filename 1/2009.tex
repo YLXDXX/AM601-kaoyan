@@ -16,6 +16,7 @@
 		%可使用leftmargin调整列表环境左边的空白长度 [leftmargin=0em]
 		\item
 		设 $y=\sqrt[4]{x \sqrt[3]{e^{x} \sqrt{\sin \frac{1}{x}}}}$, 则 $\frac{d y}{d x}=$  \tk{$y\left(\frac{1}{4 x}+\frac{1}{12}-\frac{1}{24} \cdot \frac{1}{x^{2}} \cdot \tan \frac{1}{x}\right)$} 。
+        \nynote{对数求导法，这里我算的好几次都是$y\left(\frac{1}{4 x}+\frac{1}{12}-\frac{1}{24} \cdot \frac{1}{x^{2}} \cdot \cot \frac{1}{x}\right)$，不知是否答案有误。}
 		\item  
 设 $z=\frac{1}{x} f(x y)+y g(x+y)$, 其中 $f, g$ 具有二阶连续导数, 则 $\frac{\partial^{2} z}{\partial x^{2}}=$  \tk{$\frac{2}{x^{3}} f(x y)-\frac{2 y}{x^{2}} f^{\prime}(x y)+$ $\frac{y^{2}}{x} f^{\prime \prime}(x y)+y g^{\prime \prime}(x+y)$}  。
 		
@@ -30,6 +31,10 @@
 \begin{note}
 	可能有问题，后期重算
 \end{note}
+\nynote{
+    在L上取一点$Q(x,y,z)$，有$\mathbf{QP}$与平面法向量垂直，可解出$Q$点，即得直线方程，
+    这里我算的是$\frac{x+1}{8}=\frac{y}{17}=\frac{z-4}{4}$。
+}
 
 \item
 微分方程 $y y^{\prime\prime}+\left(y^{\prime}\right)^{2}=0$ 满足初始条件 $\left.y\right|_{x=0}=1,\left.y^{\prime}\right|_{x=0}=\frac{1}{2}$ 的解为:  
@@ -107,6 +112,8 @@ $y^{2}=x+1$
 {$-\frac{\pi}{4}$}
 {$\frac{\pi}{4}$}
 
+\nynote{这里我用定义法和补顶面再高斯定理的方法算出来都是A.$-\pi/2$，不知是否答案有误。}
+
 \end{enumerate}
 
 
@@ -133,7 +140,7 @@ $y^{2}=x+1$
 
 \item 
 (本题满分 10 分)
-由直线 $y=0, y=8$ 及抛物线 $y=x^{2}$ 围成一个曲边三角形, 在曲边 $y=x^{2}$ 上求一点 $M(X, Y)$, 使得在该点处的切线与直线 $x=0, y=8$ 所围成的三角形面积最小。
+由直线 $x=0, y=8$ 及抛物线 $y=x^{2}$ 围成一个曲边三角形, 在曲边 $y=x^{2}$ 上求一点 $M(X, Y)$, 使得在该点处的切线与直线 $x=0, y=8$ 所围成的三角形面积最小。
 
 \banswer{
 根据对称性，只需要算$ 0<x<2\sqrt{2} $一边即可。
@@ -141,6 +148,9 @@ $y^{2}=x+1$
 S_{\triangle}=\frac{16}{a} + \frac{1}{4} a^{3} +4a
  \]
  $ a^{2}=\frac{8}{3} $时取得极小值。
+
+ $M$坐标为$( \frac{2\sqrt 6}{3}, \frac{8}{3})$或$( -\frac{2\sqrt 6}{3}, \frac{8}{3})$，
+ $S_{min} = \frac{64\sqrt{6}}{9}$。
 }
 
 
@@ -149,6 +159,7 @@ S_{\triangle}=\frac{16}{a} + \frac{1}{4} a^{3} +4a
 (本题满分 10 分)
 求满足 $x=\int_{0}^{x} f(t) d t + \int_{0}^{x} t f(t-x) d t$ 的可微函数 $f(x)$ 。
 
+\nynote{该题在2007年重复出现}
 \banswer{
 	$f(x)= \cos x - \sin x$。注意，这里会遇到$ f ^{\prime} (x) + f(-x)=0 $这个微分方程，解决方案有两种：①利用上一步条件得到$ f(-x) $的表达式；②利用变量替换$ t=-x $，此时有
 	\[ 
@@ -185,6 +196,7 @@ S_{\triangle}=\frac{16}{a} + \frac{1}{4} a^{3} +4a
 设 $f(x)$ 是周期为 2 的周期函数，且 $f(x)=\left\{\begin{array}{ll}x & 0 \leqslant x \leqslant 1 \\ 0 & 1<x<2\end{array}\right.$, 试求出 $f(x)$ 的傅里叶级数,
 并求数项级数 $\sum\limits_{n=0}^{\infty} \frac{1}{(2 n+1)^{2}}$ 的和。
 
+\nynote{若代入1求解，则要注意$x=1$是一个跳跃间断点，傅里叶展开式在此处的值应该是$\frac{1}{2}$。}
 \banswer{
 在$ (-1,1) $上展开得：
 \[ 
@@ -211,10 +223,8 @@ f(x)= \frac{1}{4} +\sum\limits_{n=1}^{\infty}  \frac{1}{n^{2}\pi^{2}}[ (-1)^{n}-
 \frac{a}{f^{\prime}(\xi)}+\frac{b}{f^{\prime}(\eta)}=a+b
  \]
 
-
-	
 \banswer{
-	证明略。由于$ 0 \leq \frac{a}{a+b} \leq 1 $，可令$ f(\epsilon)=\frac{a}{a+b} $，运动拉格朗日中值定理可证。
+	证明略。由于$ 0 \leq \frac{a}{a+b} \leq 1 $，可令$ f(\epsilon)=\frac{a}{a+b} $，运用拉格朗日中值定理可证。
 }
 	
 
