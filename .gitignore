@@ -288,6 +288,5 @@ TSWLatexianTemp*
 *.pl
 *.perl
 *.txt
-601_.pdf
 
 .vscode/*
