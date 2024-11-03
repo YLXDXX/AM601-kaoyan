@@ -4,7 +4,7 @@
 %基本设置
 
 \LoadClass[UTF8,a4paper,
-% fontset=windows,
+fontset=windows,
 openright,zihao=5]{ctexbook}
 %其中winfonts解决某些不常用字无法正确显示的问题，其中openright与twoside的效果一样
 %Linux下默认使用的字体有些生僻字无法正常显示
